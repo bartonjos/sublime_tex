@@ -1,0 +1,22 @@
+\documentclass{report}  % also consider book class depending on project
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{image_folder/}}
+
+\title{My Report Template}
+\author{J. Doe}
+\date{2020}
+
+\setcounter{tocdepth}{2}  % 0 for just chapter titles, 1 for sections, 2 for subsections, etc.
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\input{chapter01}
+\input{chapter02}
+\input{chapter03}
+\input{chapter04}
+
+\end{document}

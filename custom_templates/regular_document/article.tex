@@ -1,0 +1,86 @@
+% This part before \begin{document} is called the preamble
+\documentclass{article}  % other classes should be used for book, slides, letters, etc. Consult Google.
+\usepackage[margin=1.0in]{geometry}  % Default margins are 1.5 inches, which is dumb.
+\usepackage[utf8]{inputenc}  % I think this is always on by default, but it's better to be explicit.
+\usepackage{amsmath}  % for basically all the equation stuff you'll ever need.
+
+\title{Article Title}
+\author{Your Name}
+\date{June 2020}  % Comment out this entire line to use today's date. Use \date{} to remove date.
+
+\begin{document}
+
+\maketitle  % Comment out this line to remove the entire title.
+
+\section{Introduction}
+This is the introduction stuff with a couple of paragraphs. \par
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\subsection{Other stuff}
+Here are more lines of text.
+A return does nothing. \\
+But an escape character forces a return without indent.
+
+And a double return or $\backslash$par starts a new paragraph.  % see introduction for use of \par
+
+\subsubsection{data}
+
+% lots of spaces... it don't mattah
+
+
+
+
+
+
+
+
+
+\subsubsection{graphs}
+
+\subsection*{And this}
+Here is a subsection without a number.
+
+\section{Inline equations}
+You can write inline equations like this: $ 2 + 3 = 5$.  % spaces in the equation is handled by the compiler.
+
+Superscript example: $x^{3}$ 
+
+Subscript example: $x_{2}$
+
+\section{Greek Letters}
+Write out the letters' names: $\alpha$, $\beta$, $\gamma$  % Use Google to find other neat symbols.
+
+\section{Basic functions}
+Here are some basics:
+
+$\sin{z}$
+
+$\sqrt{7}$
+
+$\frac{3}{4}$
+
+$y \subseteq Z$
+
+\section{Equations on a new line}
+
+\begin{equation}
+x^5 - 7x^3 + 4x = 0
+\end{equation}
+
+\begin{equation}
+\sum_{n=1}^{10} \log{n}
+\label{equ:sumlog}
+\end{equation}
+
+You can also have non-numbered equations:
+
+\begin{equation*}
+\int_{2}^{3} x^2 dx
+\end{equation*}
+
+\section{Conclusion}
+Look at me.  My sections are numbered correctly! And don't forget equation \ref{equ:sumlog}.
+
+\end{document}

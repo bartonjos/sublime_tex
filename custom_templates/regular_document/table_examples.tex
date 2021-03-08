@@ -1,0 +1,120 @@
+\documentclass[]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{Tables and Matrices Examples}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Tables}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{table}[h]
+\centering
+\caption{This is a good looking table}
+\begin{tabular}{l | c | c | c | c | p{2in}}  % r for right justified, l for left, c for center, | for vertical lines, p{} to force col width
+Competitor Name & Swim & Cycle & Run & Total & Additional Comments\\
+\hline \hline
+John T & 13:00 & 24:00 & 18:00 & 55:00 & Under investigation due to bike that may not meet regulation standards. More to follow.\\
+Norman P & 13:00 & 24:00 & 18:00 & 55:00 & Winner \\
+Alex K & 13:00 & 24:00 & 18:00 & 55:00 & Retired \\
+Sarah H & 13:00 & 24:00 & 18:00 & 55:00 
+
+\end{tabular}
+\end{table}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{table}[h]
+\centering
+\caption{This table has horizontal lines}
+\begin{tabular}{l | c | c | c | c | l}  % r for right justified, l for left, c for center, | for vertical lines
+Competitor Name & Swim & Cycle & Run & Total & Additional Comments\\
+\hline \hline
+John T & 13:00 & 24:00 & 18:00 & 55:00 \\
+\hline
+Norman P & 13:00 & 24:00 & 18:00 & 55:00 & Winner \\
+\hline
+Alex K & 13:00 & 24:00 & 18:00 & 55:00 & Retired \\
+\hline
+Sarah H & 13:00 & 24:00 & 18:00 & 55:00 
+
+\end{tabular}
+\end{table}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Creating Matrices}
+
+Here's some matrices.
+
+\[
+\begin{matrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{matrix}
+\]
+
+\[
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{pmatrix}
+\]
+
+\[
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{bmatrix}
+\]
+
+\[
+\begin{Bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{Bmatrix}
+\]
+
+\[
+\begin{vmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{vmatrix}
+\]
+
+\[
+\begin{Vmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{Vmatrix}
+\]
+
+A more interesting matrix that nests matrices:
+
+\[
+\begin{pmatrix}
+\begin{matrix}
+a & b \\
+c & d
+\end{matrix} & 0 \\
+0 & \begin{matrix}
+a & b \\
+c & d
+\end{matrix}
+\end{pmatrix}
+\]
+
+\end{document}
