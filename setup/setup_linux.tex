@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[utf8]{inputenc}
+
+\title{\LaTeX \ Setup for the Sublime Editor with Linux}
+\author{Joseph Barton}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+	\item Install Tex Live, other fonts, and other useful packages. (texlive-science has algorithm related packages such as algorithm.sty and algorithmic.sty)
+
+	\$ sudo apt install texlive-base
+
+	\$ sudo apt install texlive-fonts-recommended
+
+	\$ sudo apt install texlive-fonts-extra
+
+	\$ sudo apt install texlive-science
+
+	\$ sudo apt install latexmk
+
+	\$ sudo apt install biber
+
+\item In Sublime, go to Tools $\rightarrow$ Install Package Control to install the package controller.
+
+\item Use Sublime's package control to install LaTeXTools package. In Sublime, go to ``Preferences $\rightarrow$ Package Control $\rightarrow$ Package Control: Install Package'' and scroll or search for LaTeXTools
+
+\item Ensure setup is correct:
+	\begin{itemize}
+	\item Go to ``Preferences $\rightarrow$ Package Settings $\rightarrow$ LaTeXTools $\rightarrow$ Settings -- User'' and scroll to the linux settings (about line 227)
+	\item You will likely need to change the texpath to ``\$PATH:/usr/bin'' because that's where stuff is installed.
+	\item Go to ``Preferences $\rightarrow$ Package Settings $\rightarrow$ LaTeXTools $\rightarrow$ Check System''. The status of all essential programs should be labeled as ``available''. The packages that have a ``missing'' status may need to be installed.  You may be able to get away without installing xelatex and magick.
+	\end{itemize}
+
+\item Now Create a .tex document (or just use this document) and press Ctrl+b to compile the file. The default pdf viewer should pop up and show the compiled document.
+
+\item Install LaTex-cwl and LaTeXYZ with Sublime's package control just like we did above. These packages assist with autocompletion and syntax shortcuts. For reference:
+	\begin{itemize}
+	\item https://github.com/LaTeXing/LaTeX-cwl
+	\item https://github.com/randy3k/LaTeXYZ
+	\end{itemize}
+
+\item A comprehensive list of \LaTeX \ symbols can be found here:
+	\begin{itemize}
+	\item https://mirror.its.dal.ca/ctan/info/symbols/comprehensive/symbols-a4.pdf
+	\end{itemize}
+\end{enumerate}
+
+\end{document}
