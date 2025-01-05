@@ -12,45 +12,54 @@
 
 \begin{enumerate}
 \item Install TeX Live https://www.tug.org/texlive/acquire.html. This will take some time to download.
+	\begin{enumerate}
+		\item TeX Live is not necessary on personal computers. MikTeX is restricted on ARA systems, but is much easier to deal with on personal computers.
+		\item Install MikTeX. Install to your user profile (should be the default), and it will automatically be added to your user path.
+	\end{enumerate}
 
 \item Add TeX Live executables to your system path. It is in a folder similar to ``C:$ \backslash $texlive$ \backslash $2020$ \backslash $bin$ \backslash $win32''
+	\begin{enumerate}
+		\item Unnecessary for MikTeX install
+	\end{enumerate} 
+
 
 \item In Sublime, go to Tools $\rightarrow$ Install Package Control to install the package controller.
 
 \item Use Sublime's package control to install LaTeXTools package. In Sublime, go to ``Preferences $\rightarrow$ Package Control $\rightarrow$ Package Control: Install Package'' and scroll or search for LaTeXTools
 
 \item Install the lightweight pdf reader SumatraPDF at https://www.sumatrapdfreader.org/download-free-pdf-viewer.html
+	\begin{enumerate}
+		\item If on an ARA system, it will likely install in your Admin folder and give you an error that it can't be opened.  It may be in ``C:$ \backslash $Users$ \backslash $.ARA-ADMIN$ \backslash $AppData$ \backslash $Local''. So move the SumatraPDF folder to ``C:$ \backslash $Program Files'' or somewhere else that is accessible.
+	\end{enumerate}
 
-\item It will likely install in your Admin folder and give you an error that it can't be opened.  It may be in ``C:$ \backslash $Users$ \backslash $.ARA-ADMIN$ \backslash $AppData$ \backslash $Local''. So move the SumatraPDF folder to ``C:$ \backslash $Program Files'' or somewhere else that is accessible.
-
-\item Add the ``C:$ \backslash $Program Files$ \backslash $SumatraPDF'' (or whatever you chose) to your system path and restart your computer for the path changes to take affect.
+\item Add the ``C:$ \backslash $Program Files$ \backslash $SumatraPDF'' (or whatever you chose) to your User path and restart your computer for the path changes to take affect.
 
 \item Ensure setup is correct:
-	\begin{itemize}
-	\item Go to ``Preferences $\rightarrow$ Package Settings $\rightarrow$ LaTeXTools $\rightarrow$ Settings -- User'' and scroll to the Platform Settings (about line 209)
-	\item Ensure the TeX distro is set to ``texlive''
-	\item Go to ``Preferences $\rightarrow$ Package Settings $\rightarrow$ LaTeXTools $\rightarrow$ Check System''. The status of all essential programs should be labeled as ``available''.
-	\end{itemize}
+	\begin{enumerate}
+		\item Go to ``Preferences $\rightarrow$ Package Settings $\rightarrow$ LaTeXTools $\rightarrow$ Settings -- User'' and scroll to the Platform Settings (about line 209)
+		\item Ensure the TeX distro is set to ``texlive''
+		\item Go to ``Preferences $\rightarrow$ Package Settings $\rightarrow$ LaTeXTools $\rightarrow$ Check System''. The status of all essential programs should be labeled as ``available''.
+	\end{enumerate}
 
 \item Now Create a .tex document (or just use this document) and press Ctrl+b to compile the file. Sumatra should pop up and show you the compiled document.
 
 \item Install LaTex-cwl and LaTeXYZ with Sublime's package control just like we did above. These packages assist with autocompletion and syntax shortcuts. For reference:
 	\begin{itemize}
-	\item https://github.com/LaTeXing/LaTeX-cwl
-	\item https://github.com/randy3k/LaTeXYZ
+		\item https://github.com/LaTeXing/LaTeX-cwl
+		\item https://github.com/randy3k/LaTeXYZ
 	\end{itemize}
 
-\item Configure inverse search so you can compare a pdf object to an editor object easily.
-	\begin{itemize}
-	\item Compile a tex file so that SumatraPDF is displaying a tex document.
-	\item In the SumatraPDF window, go to ``Settings $\rightarrow$ Options'' and in the inverse search section put the path to your sublime executible followed by ``\%f:\%l''
-	\item For example: ``C:$ \backslash $Program Files$ \backslash $Sublime Text 3$ \backslash $sublime\_text.exe'' ``\%f:\%l''
-	\item Now double clicking on a line in the pdf will automatically move the cursor to the corresponding line in Sublime.
-	\end{itemize}
+\item Configure inverse search so you can compare a pdf object to an editor object easily. (First try to see if inverse search already works before doing this step.)
+	\begin{enumerate}
+		\item Compile a tex file so that SumatraPDF is displaying a tex document.
+		\item In the SumatraPDF window, go to ``Settings $\rightarrow$ Options'' and in the inverse search section put the path to your sublime executible followed by ``\%f:\%l''
+		\item For example: ``C:$ \backslash $Program Files$ \backslash $Sublime Text 3$ \backslash $sublime\_text.exe'' ``\%f:\%l''
+		\item Now double clicking on a line in the pdf will automatically move the cursor to the corresponding line in Sublime.
+	\end{enumerate}
 
 \item A comprehensive list of \LaTeX \ symbols can be found here:
 	\begin{itemize}
-	\item https://mirror.its.dal.ca/ctan/info/symbols/comprehensive/symbols-a4.pdf
+		\item https://mirror.its.dal.ca/ctan/info/symbols/comprehensive/symbols-a4.pdf
 	\end{itemize}
 \end{enumerate}
 
